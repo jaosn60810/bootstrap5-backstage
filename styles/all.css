@@ -12390,6 +12390,30 @@ textarea.form-control-lg {
   -webkit-transition: margin-left 0.25s;
   transition: margin-left 0.25s;
 }
+.sidebar .sidebar-link {
+  color: #212529;
+  display: block;
+  text-decoration: none;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+.sidebar .sidebar-link:hover {
+  background-color: rgba(13, 110, 253, 0.16);
+}
+.sidebar .sidebar-link.active {
+  position: relative;
+  color: #0d6efd !important;
+  background-color: rgba(13, 110, 253, 0.16);
+}
+.sidebar .sidebar-link.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  height: 100%;
+  width: 3px;
+  background: #0d6efd;
+}
 
 .main {
   width: 100%;
