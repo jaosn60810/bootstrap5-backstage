@@ -148,7 +148,7 @@
                       <td class="ps-4">
                         <input type="checkbox" class="form-check-input" />
                       </td>
-                      <td scope="row">TX123456789</td>
+                      <td scope="row">TX123456788</td>
                       <td>asd123@gmail.com</td>
                       <td>將吸納</td>
                       <td>中式西餐廳：好吃的冰淇淋</td>
@@ -177,7 +177,14 @@
                               <a class="dropdown-item" href="#">修改狀態</a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#">刪除訂單</a>
+                              <a
+                                class="dropdown-item text-danger"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                                data-bs-order-id="TX123456788"
+                                href="#"
+                                >刪除訂單</a
+                              >
                             </li>
                           </ul>
                         </div>
@@ -320,6 +327,54 @@
                 </ul>
               </nav>
             </div>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="deleteModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">刪除訂單</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>確認刪除「<span id="deleteText"></span>」的訂單嗎？</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                      確認刪除
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+              const modalByDelete = document.querySelector('#deleteModal');
+              modalByDelete.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const orderId = button.dataset.bsOrderId;
+                const modalText = modalByDelete.querySelector('#deleteText');
+
+                modalText.textContent = orderId;
+              });
+            </script>
           </div>
         </div>
       </main>
