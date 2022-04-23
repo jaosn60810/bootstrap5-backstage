@@ -12389,6 +12389,8 @@ textarea.form-control-lg {
   margin-left: -280px;
   -webkit-transition: margin-left 0.25s;
   transition: margin-left 0.25s;
+  position: fixed;
+  top: 0;
 }
 .sidebar .sidebar-link {
   color: #212529;
@@ -12422,6 +12424,9 @@ textarea.form-control-lg {
 .sidebar-toggle .sidebar {
   margin-left: 0;
 }
+.sidebar-toggle .main {
+  margin-left: 280px;
+}
 
 @media (min-width: 992px) {
   .sidebar {
@@ -12431,6 +12436,9 @@ textarea.form-control-lg {
 
   .main {
     width: calc(100vw - 280px);
+    margin-left: 280px;
+    -webkit-transition: margin-left 0.25s;
+    transition: margin-left 0.25s;
   }
 
   .sidebar-toggle .sidebar {

@@ -5,6 +5,8 @@ $sidebar-width: 280px;
   width: $sidebar-width;
   margin-left: -$sidebar-width;
   transition: margin-left 0.25s;
+  position: fixed;
+  top: 0;
 
   .sidebar-link {
     color: $dark;
@@ -41,6 +43,10 @@ $sidebar-width: 280px;
   .sidebar {
     margin-left: 0;
   }
+
+  .main {
+    margin-left: $sidebar-width;
+  }
 }
 
 // 桌面板(up)
@@ -53,6 +59,8 @@ $sidebar-width: 280px;
   .main {
     // 變數視為一個字串
     width: calc(100vw - #{$sidebar-width});
+    margin-left: $sidebar-width;
+    transition: margin-left 0.25s;
   }
 
   // 展開 sidebar
