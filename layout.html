@@ -17,41 +17,61 @@
     <div class="d-flex">
       <aside class="sidebar vh-100 border-end pt-3 d-flex bg-white flex-column">
         <!-- 1.後台名稱 -->
-        <div class="px-4">
+        <h1 class="px-4 fs-6">
           <strong>六角西餐廳</strong>
           - 後台管理
-        </div>
+        </h1>
         <!-- 2.選單 -->
-        <div class="overflow-auto mt-3">
-          <div>
-            <a href="#" class="sidebar-link active">
-              <div class="px-4">首頁</div>
+        <ul class="overflow-auto mt-3 list-unstyled">
+          <li>
+            <a href="./index.html" class="sidebar-link active">
+              <div class="px-4">
+                <i class="bi bi-house me-2"></i>
+                首頁
+              </div>
             </a>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <a
               href="#menu-order"
               class="sidebar-link"
               data-bs-toggle="collapse"
             >
               <div class="d-flex justify-content-between px-4">
-                <p class="mb-0">訂單管理</p>
+                <p class="mb-0">
+                  <i class="bi bi-card-checklist me-2"></i>
+                  訂單管理
+                </p>
                 <i class="bi bi-caret-down"></i>
               </div>
             </a>
 
-            <div class="collapse" id="menu-order">
-              <a href="#" class="sidebar-link">
-                <div class="ps-5">其他項目</div>
-              </a>
-            </div>
-          </div>
-        </div>
+            <ul class="collapse list-unstyled" id="menu-order">
+              <li>
+                <a href="./orders.html" class="sidebar-link">
+                  <div class="ps-5">訂單列表</div>
+                </a>
+              </li>
+              <li>
+                <a href="./order.html" class="sidebar-link">
+                  <div class="ps-5">單一訂單細節</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="sidebar-link">
+              <div class="px-4">
+                <i class="bi bi-list-stars me-2"></i>
+                參考連結
+              </div>
+            </a>
+          </li>
+        </ul>
         <!-- 3.登出按鈕 -->
-        <a href="#" class="mt-auto sidebar-link">
-          <div class="px-4">登出</div>
-        </a>
+        <a href="#" class="mt-auto sidebar-link px-4"> 登出 </a>
       </aside>
 
       <main class="main">

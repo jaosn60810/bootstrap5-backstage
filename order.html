@@ -21,41 +21,61 @@
     <div class="d-flex">
       <aside class="sidebar vh-100 border-end pt-3 d-flex bg-white flex-column">
         <!-- 1.後台名稱 -->
-        <div class="px-4">
+        <h1 class="px-4 fs-6">
           <strong>六角西餐廳</strong>
           - 後台管理
-        </div>
+        </h1>
         <!-- 2.選單 -->
-        <div class="overflow-auto mt-3">
-          <div>
-            <a href="#" class="sidebar-link active">
-              <div class="px-4">首頁</div>
+        <ul class="overflow-auto mt-3 list-unstyled">
+          <li>
+            <a href="./index.html" class="sidebar-link">
+              <div class="px-4">
+                <i class="bi bi-house me-2"></i>
+                首頁
+              </div>
             </a>
-          </div>
+          </li>
 
-          <div>
+          <li>
             <a
               href="#menu-order"
               class="sidebar-link"
               data-bs-toggle="collapse"
             >
               <div class="d-flex justify-content-between px-4">
-                <p class="mb-0">訂單管理</p>
+                <p class="mb-0">
+                  <i class="bi bi-card-checklist me-2"></i>
+                  訂單管理
+                </p>
                 <i class="bi bi-caret-down"></i>
               </div>
             </a>
 
-            <div class="collapse" id="menu-order">
-              <a href="#" class="sidebar-link">
-                <div class="ps-5">其他項目</div>
-              </a>
-            </div>
-          </div>
-        </div>
+            <ul class="collapse list-unstyled" id="menu-order">
+              <li>
+                <a href="./orders.html" class="sidebar-link">
+                  <div class="ps-5">訂單列表</div>
+                </a>
+              </li>
+              <li>
+                <a href="./order.html" class="sidebar-link active">
+                  <div class="ps-5">單一訂單細節</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" class="sidebar-link">
+              <div class="px-4">
+                <i class="bi bi-list-stars me-2"></i>
+                參考連結
+              </div>
+            </a>
+          </li>
+        </ul>
         <!-- 3.登出按鈕 -->
-        <a href="#" class="mt-auto sidebar-link">
-          <div class="px-4">登出</div>
-        </a>
+        <a href="#" class="mt-auto sidebar-link px-4"> 登出 </a>
       </aside>
 
       <main class="main">
@@ -106,7 +126,7 @@
             </div>
             <div class="col-lg-9">
               <div class="card mb-3">
-                <div class="card-header" id="card-summary">摘要</div>
+                <h2 class="card-header fs-6" id="card-summary">摘要</h2>
                 <div class="card-body">
                   <dl class="row mb-0">
                     <dt class="col-sm-3 text-truncate">訂單編號</dt>
@@ -122,7 +142,7 @@
               </div>
 
               <div class="card mb-3">
-                <div class="card-header" id="card-detail">購買品項</div>
+                <h2 class="card-header fs-6" id="card-detail">購買品項</h2>
                 <div class="card-body p-0">
                   <table
                     class="table table-hover mb-0 text-nowrap align-middle w-100"
@@ -148,6 +168,123 @@
                         <td>大麥克全家餐</td>
                         <td>900</td>
                         <td>1</td>
+                        <td><div class="text-muted">尚未處理</div></td>
+                        <td class="text-center pe-3">
+                          <div class="btn-group">
+                            <button
+                              type="button"
+                              class="btn btn-outline-secondary btn-sm dropdown-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              編輯
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">尚未處理</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">已出貨</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">已取貨</a>
+                              </li>
+                              <li><hr class="dropdown-divider" /></li>
+                              <li>
+                                <a class="dropdown-item text-danger" href="#"
+                                  >刪除品項</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="align-middle">
+                        <td class="ps-4">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td scope="row">P1234567</td>
+                        <td>義大利麵佐番茄醬</td>
+                        <td>450</td>
+                        <td>2</td>
+                        <td><div class="text-muted">尚未處理</div></td>
+                        <td class="text-center pe-3">
+                          <div class="btn-group">
+                            <button
+                              type="button"
+                              class="btn btn-outline-secondary btn-sm dropdown-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              編輯
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">尚未處理</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">已出貨</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">已取貨</a>
+                              </li>
+                              <li><hr class="dropdown-divider" /></li>
+                              <li>
+                                <a class="dropdown-item text-danger" href="#"
+                                  >刪除品項</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="align-middle">
+                        <td class="ps-4">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td scope="row">P1234567</td>
+                        <td>義大利麵佐番茄醬</td>
+                        <td>450</td>
+                        <td>2</td>
+                        <td><div class="text-muted">尚未處理</div></td>
+                        <td class="text-center pe-3">
+                          <div class="btn-group">
+                            <button
+                              type="button"
+                              class="btn btn-outline-secondary btn-sm dropdown-toggle"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              編輯
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">尚未處理</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">已出貨</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">已取貨</a>
+                              </li>
+                              <li><hr class="dropdown-divider" /></li>
+                              <li>
+                                <a class="dropdown-item text-danger" href="#"
+                                  >刪除品項</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="align-middle">
+                        <td class="ps-4">
+                          <input class="form-check-input" type="checkbox" />
+                        </td>
+                        <td scope="row">P1234567</td>
+                        <td>義大利麵佐番茄醬</td>
+                        <td>450</td>
+                        <td>2</td>
                         <td><div class="text-muted">尚未處理</div></td>
                         <td class="text-center pe-3">
                           <div class="btn-group">
@@ -247,7 +384,7 @@
               </div>
 
               <div class="card mb-3">
-                <div class="card-header" id="card-invoice">發票管理</div>
+                <h2 class="card-header fs-6" id="card-invoice">發票管理</h2>
                 <div class="card-body">
                   <div class="row mb-3">
                     <label for="invoiceType" class="col-sm-2 col-form-label"
@@ -296,7 +433,7 @@
               </div>
 
               <div class="card mb-3">
-                <div class="card-header" id="card-danger">危險操作</div>
+                <h2 class="card-header fs-6" id="card-danger">危險操作</h2>
                 <div class="card-body">
                   <div class="row align-items-center mb-3">
                     <div class="col-2">
@@ -307,7 +444,7 @@
                         退款
                       </button>
                     </div>
-                    <div class="col">退還用戶款項</div>
+                    <p class="col">退還用戶款項</p>
                   </div>
                   <div class="row align-items-center mb-3">
                     <div class="col-2">
@@ -318,7 +455,7 @@
                         折讓
                       </button>
                     </div>
-                    <div class="col">針對已開立的訂單退回部分款項</div>
+                    <p class="col">針對已開立的訂單退回部分款項</p>
                   </div>
                   <div class="row align-items-center">
                     <div class="col-2">
@@ -329,10 +466,9 @@
                         刪除訂單
                       </button>
                     </div>
-                    <div class="col">將訂單刪除，並移除相關訂單資訊</div>
+                    <p class="col">將訂單刪除，並移除相關訂單資訊</p>
                   </div>
                 </div>
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
               </div>
             </div>
           </div>
